@@ -80,25 +80,55 @@ function appMenu() {
             type: 'input',
             message: 'What is the engineers email?',
             name: 'engineerEmail',
+        }, {
+            type: 'input',
+            message: 'What is your engineers Github username?',
+            name: 'engineerGithub'
         }]).then(answer => {
-            const engineer = new Engineer(answers.engineerName, answer.engineerId, answer.engineerEmail);
+            const engineer = new Engineer(answers.engineerName, answer.engineerId, answer.engineerEmail, answer.engineerGithub);
             teamMembers.push(engineer);
             idArray.push(answers.engineerId);
             createTeam();
         });
     }
+
+    function addIntern() {
+        console.log("Intern stats needed");
+        inquirer.prompt([{
+            type: 'input',
+            message: 'What is the interns name?',
+            name: 'internName',
+        }, {
+            type: 'input',
+            message: 'What is the interns ID?',
+            name: 'internId',
+        }, {
+            type: 'input',
+            message: 'What is the interns email?',
+            name: 'internEmail',
+        }, {
+            type: 'input',
+            message: 'What school does the intern attend?',
+            name: 'internSchool'
+        }]).then(answer => {
+            const intern = new Intern(answers.internName, answer.internId, answer.internEmail, answer.internSchool);
+            teamMembers.push(intern);
+            idArray.push(answers.internId);
+            createTeam();
+        });
+    }
+
+    function buildTeam() {
+
+        if (!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR)
+        }
+        fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+    }
+
+    createManager();
 }
 
-function addIntern() {
-
-}
-
-function buildTeam() {
-
-}
-
-createManager();
-}
 
 appMenu();
 
