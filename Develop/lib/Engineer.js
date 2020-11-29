@@ -10,18 +10,18 @@ class Engineer extends Employee {
         this.email = email;
         this.github = github;
     }
-    // getName() {
-    //     answer.engineerName = name;
-    //     return this.name;
-    // }
-    // getId() {
-    //     answer.engineerId = id;
-    //     return this.id;
-    // }
-    // getEmail() {
-    //     answer.engineerEmail = email;
-    //     return this.email;
-    // }
+    getName() {
+        answer.engineerName = name;
+        return this.name;
+    }
+    getId() {
+        answer.engineerId = id;
+        return this.id;
+    }
+    getEmail() {
+        answer.engineerEmail = email;
+        return this.email;
+    }
     getGithub() {
         answer.engineergitHub = github;
         return this.github;
@@ -31,13 +31,13 @@ class Engineer extends Employee {
     }
 }
 
-// engineer.getName();
-// engineer.getId();
-// engineer.getEmail();
+engineer.getName();
+engineer.getId();
+engineer.getEmail();
 engineer.getGithub();
 engineer.getRole();
 
-var engineer = new Engineer(github);
+var engineer = new Engineer(name, id, email, github);
 
 module.exports = Engineer;
 

@@ -19,13 +19,6 @@ class Employee {
     }
 }
 
-var employee = new Employee(name, id, email);
-
-employee.getName();
-employee.getId();
-employee.getEmail();
-employee.getRole();
-
 module.exports = Employee;
 
 
