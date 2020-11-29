@@ -8,12 +8,11 @@ class Intern extends Employee {
         this.name = name;
         this.id = id;
         this.email = email;
-
         this.school = school;
     }
     getName() {
         // answer.internName = name;
-        return this.name;
+        return this._name;
     }
     getId() {
         // answer.internId = id;
@@ -25,7 +24,7 @@ class Intern extends Employee {
     }
     getSchool() {
         // answer.internSchool = school;
-        return school;
+        return this.school;
     }
     getRole() {
         return "Intern";

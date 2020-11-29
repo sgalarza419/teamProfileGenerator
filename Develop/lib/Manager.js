@@ -8,7 +8,6 @@ class Manager extends Employee {
         this.name = name;
         this.id = id;
         this.email = email;
-
         this.officeNumber = officeNumber;
     }
     getName() {
