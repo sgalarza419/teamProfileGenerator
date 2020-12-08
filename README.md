@@ -25,8 +25,8 @@ User will need to use the integrated terminal to run the app.js file using the l
 
 ## Screenshots/Video
 
-![](images/myTeam.PNG)
-![](images/teamGeneratedScreenRecording.wmv)
+![Sample Team](assets/teamProfileGenerator.PNG)
+![Demo](assets/teamProfileGenerator.gif)
 
 ## Contributing
 
